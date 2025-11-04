@@ -35,7 +35,7 @@ namespace Section1_1
                 .AddTo(this);
         }
 
-        // 子ルーチンを起動して、その結果を Observable で返す
+        // コルーチンを起動して、その結果を Observable で返す
         private IObservable<Texture> GetTextureAsync(string uri)
             => Observable
                 .FromCoroutine<Texture>(observer => GetTextureCoroutine(observer, uri));
