@@ -53,7 +53,7 @@ namespace Section1_2
             string uri,
             CancellationToken token)
         {
-            using (var uwr = UnityWebRequest.GetTexture(uri))
+            using (var uwr = UnityWebRequestTexture.GetTexture(uri))
             {
                 await uwr.SendWebRequest().WithCancellation(token);
                 return ((DownloadHandlerTexture)uwr.downloadHandler).texture;
