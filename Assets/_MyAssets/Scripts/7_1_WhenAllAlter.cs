@@ -3,10 +3,11 @@ using Cysharp.Threading.Tasks;
 
 namespace Section7_1
 {
-    public sealed class UniTaskWhenAllAlter : MonoBehaviour
+    public sealed class WhenAllAlter : MonoBehaviour
     {
         private async UniTaskVoid Start()
         {
+
             var uniTask1 = UniTask.FromResult(1);
             var uniTask2 = UniTask.FromResult(2);
             var uniTask3 = UniTask.FromResult(3);
