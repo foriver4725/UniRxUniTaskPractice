@@ -5,7 +5,7 @@ namespace Section8_2
 {
     public sealed class Forget : MonoBehaviour
     {
-        private async UniTaskVoid Start()
+        private void Start()
         {
             DoAsync().Forget();
         }

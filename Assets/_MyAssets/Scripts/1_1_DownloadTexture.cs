@@ -46,7 +46,7 @@ namespace Section1_1
             using var uwr = UnityWebRequestTexture.GetTexture(uri);
 
             yield return uwr.SendWebRequest();
-            if (uwr.isNetworkError | uwr.isHttpError)
+            if (uwr.result == UnityWebRequest.Result.ConnectionError | uwr.result == UnityWebRequest.Result.ProtocolError)
             {
                 // エラーが起きたら OnError メッセージを発行する
                 observer.OnError(new Exception(uwr.error));
